@@ -20,6 +20,7 @@ class RestaurantsController < ApplicationController
   # restaurant GET    /restaurants/:id(.:format) restaurants#show
   def show
     @restaurant = Restaurant.find(params[:id])
+    @reviews = Review.where(restaurant_id: params[:id])
   end
 
   def update

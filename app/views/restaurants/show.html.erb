@@ -3,6 +3,9 @@
 <% @restaurant.attributes.each do |attr_name, attr_value| %>
 <li><strong><%= attr_name %>:</strong> <%= attr_value %>   </li>
 <% end %>
-<%= link_to 'show review',restaurant_reviews_path(@restaurant)  %>
+<% link_to 'show review',restaurant_reviews_path(@restaurant), class: "btn btn-primary"  %>
 </ul>
-<%= link_to 'go back to all restaurants',restaurants_path  %>
+<h3> reviews </h3>
+<%= render 'reviews/index' %>
+
+<%= link_to 'go back to all restaurants',restaurants_path, class: "btn btn-primary"  %>
