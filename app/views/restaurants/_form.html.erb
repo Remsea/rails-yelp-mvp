@@ -1,0 +1,8 @@
+<%= simple_form_for @restaurant do |f| %>
+    <%=f.input :name %>
+    <%=f.input :address %>
+    <%=f.input :phone_number %>
+    <%=f.input :category, :error_html => { :class => "invalid-feedback"}%>
+    <%= f.error :name, :class => "invalid-feedback" %>
+    <%= f.button :submit %>
+<% end %>
