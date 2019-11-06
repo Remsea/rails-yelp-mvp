@@ -1,11 +1,13 @@
 <h1>list reviews</h1>
-
+<hr>
 <h2><%= @restaurant.name %></h2>
+<br>
+<hr>
 <ul>
-<%= @reviews.each do |reviews| %>
+<% @reviews.each do |reviews| %>
 <li><strong><%= reviews.content %>:</strong> <%= reviews.rating %>   </li>
 <% end %>
-
+<hr>
 </ul>
 <%= link_to 'go back to the restaurant',restaurant_path(@restaurant)  %>
 <br>
